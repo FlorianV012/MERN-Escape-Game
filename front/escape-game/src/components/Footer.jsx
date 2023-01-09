@@ -10,7 +10,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-sub-part">
         <img style={{ height: "3rem", width: "auto" }} src={EscapeGameLogo} />
-        <div className="wesh">
+        <div className="footer-router">
           <p>
           Home | Blog | Pricing | About | Contact</p>
         </div>
