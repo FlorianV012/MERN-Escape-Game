@@ -1,16 +1,17 @@
 import { useState } from "react";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
+import RoomThumbNails from "./components/RoomThumbnails";
+
 
 import Home from "./routes/Home";
 
 function App() {
-  const [count, setCount] = useState(0);
-
+  
   return (
     <div className="App">
       <NavBar />
-      <Home />
+      <RoomThumbNails />
       <Footer />
     </div>
   );
