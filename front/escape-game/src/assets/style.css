@@ -1,0 +1,36 @@
+* , ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: green;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    min-height: 200px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #333;
+    color: #f1f1f1f1;
+}
+
+.footer-sub-part {
+    max-width: 25%;
+    /* height: 200px; */
+}
+
+.wesh {
+    display: flex;
+    margin-right: 2rem;
+}
+
+.logo-social-media {
+    margin: .7rem;
+    width: 2rem;
+    height: 2rem;
+}
