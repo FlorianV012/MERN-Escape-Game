@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-import NavBar from "./NavBar";
-import Footer from "./Footer";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <NavBar />
       coucou
-      <Footer />
+      <Footer className='footer'/>
     </div>
   );
 }
