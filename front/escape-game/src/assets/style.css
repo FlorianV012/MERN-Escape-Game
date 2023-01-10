@@ -10,8 +10,14 @@ body {
   font-family: Roboto, Helvetica, sans-serif;
 }
 
-/* ----- card component ----- */
+.home {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px;
+}
 
+/* ----- card component ----- */ 
 .card {
   background-color: white;
   margin: 20px;
@@ -22,6 +28,7 @@ body {
 
 .card-header {
   border-radius: 5px 5px 0 0;
+  height: 200px;
 }
 
 .card-body h3 {
@@ -82,4 +89,16 @@ body {
   margin: 0.7rem;
   width: 2rem;
   height: 2rem;
+}
+
+
+/* ----- SignUp Form ----- */
+
+.signup {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem auto;
+  justify-content: center;
+  text-align: center;
+  width: 40rem;
 }
