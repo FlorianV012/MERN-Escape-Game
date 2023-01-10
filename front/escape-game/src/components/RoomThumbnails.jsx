@@ -14,8 +14,8 @@ export default function RoomThumbNails() {
   }, []);
 
 
-  const cards = rooms.map((room, index) => (
-      <div className="card" key={index}>
+  const cards = rooms.map((room) => (
+      <div className="card" key={room._id}>
         <img
           className="card-header"
           src={room.img}
