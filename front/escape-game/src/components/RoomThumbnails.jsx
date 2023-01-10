@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 
 export default function RoomThumbNails() {
   const [rooms, setRooms] = useState([]);
+
 
   useEffect(() => {
     fetch(`http://localhost:5000/rooms`)
@@ -16,21 +18,18 @@ export default function RoomThumbNails() {
 
   const cards = rooms.map((room) => (
       <div className="card" key={room._id}>
-        <img
-          className="card-header"
-          src={room.img}
-          style={{ width: "100%", height: "" }}
-        />
+        <div className="card-header"
+          style={{backgroundImage:`url(${room.img})`}}>
+        </div>
         <div className="card-body">
           <h3>{room.name}</h3>
           <p>{room.description}</p>
         </div>
         <div className="card-footer">
           <div className="card-footer-link">
-            <p className="card-link">DETAIL</p>
-            <p className="card-link">RESERVER</p>
+          < Link className="card-link" to={`/rooms/${room._id}`} >RESERVER</Link>
           </div>
-          <img src={`../../public/assets/PEGI_${room.age}.png`} />
+          <img src={`./assets/PEGI_${room.age}.png`} />
         </div>
       </div>
   ))

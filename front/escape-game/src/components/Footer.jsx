@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import EscapeGameLogo from "../assets/logo-escape.png";
 import FacebookLogo from "../assets/logo-facebook.png";
 import TwitterLogo from "../assets/logo-twitter.png";
@@ -12,7 +13,7 @@ export default function Footer() {
         <img style={{ height: "3rem", width: "auto" }} src={EscapeGameLogo} />
         <div className="footer-router">
           <p>
-          Home | Blog | Pricing | About | Contact</p>
+         <Link className="footer-router-link" to={'/'} >Home</Link> | Blog | Pricing | About | Contact</p>
         </div>
       </div>
       <div className="footer-sub-part">
