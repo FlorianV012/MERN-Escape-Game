@@ -9,6 +9,7 @@ app.use(cors());
 const port = process.env.PORT || 5000;
 
 const roomsRoutes = require("./routes/rooms_routes");
+const usersRoutes = require("./routes/users_routes");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -18,6 +19,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/rooms", roomsRoutes);
+app.use("/users", usersRoutes);
 
 app.listen(port, () => {
   console.log(`Serveur connecté sur le port : ${port}`);
