@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import { envConfig } from "../config/config";
 
 export default function RoomThumbNails() {
   const [rooms, setRooms] = useState([]);
 
 
   useEffect(() => {
-    fetch(`http://localhost:5000/rooms`)
+    fetch(`${envConfig.URL}/rooms`)
       .then((res) => res.json())
       .then((data) => {
         setRooms(data);
-        console.log(data);
       })
       .catch((err) => console.log(err));
   }, []);

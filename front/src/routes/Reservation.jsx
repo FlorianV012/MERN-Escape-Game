@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import { envConfig } from '../config/config'; 
 import { useParams } from "react-router-dom";
 import RoomDetail from '../components/RoomDetail'
 // import RoomReservation from '../components/RoomReservation'
@@ -9,7 +10,7 @@ export default function Reservation() {
     const params = useParams();
   
     useEffect(() => {
-      fetch(`http://localhost:5000/rooms/${params.id}`)
+      fetch(`${envConfig.URL}/rooms/${params.id}`)
         .then((res) => res.json())
         .then((data) => {
           setRoom(data);

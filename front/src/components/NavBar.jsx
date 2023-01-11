@@ -1,7 +1,7 @@
 import React from "react";
 import EscapeGameLogo from "../assets/logo-escape.png";
-import { Link } from 'react-router-dom';
- 
+import { Link } from "react-router-dom";
+
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -23,16 +23,22 @@ export default function NavBar() {
               aria-label="menu"
               sx={{ mr: 2 }}
             >
-            <Link to={'/'}>
-              <img
-                style={{ height: "3rem", width: "auto" }}
-                src={EscapeGameLogo}
-              />
-            </Link>
+              <Link to={"/"}>
+                <img
+                  style={{ height: "3rem", width: "auto" }}
+                  src={EscapeGameLogo}
+                />
+              </Link>
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            </Typography>
+            <Typography
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1 }}
+            ></Typography>
             <Button color="inherit">CONNEXION</Button>
+            <Link className="navbar-link" to={"/signup"}>
+              <Button color="inherit">INSCRIPTION</Button>
+            </Link>
           </Toolbar>
         </AppBar>
       </Box>

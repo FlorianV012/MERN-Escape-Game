@@ -3,6 +3,7 @@ import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import RoomThumbNails from "./components/RoomThumbnails";
 import Reservation from './routes/Reservation';
+import SignUp from './routes/SignUp';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Routes>
         <Route path='/' element={<RoomThumbNails />} />
         <Route path='/rooms/:id' element={<Reservation />} />
+        <Route path='/signup' element={<SignUp />} />
       </Routes>
       <Footer />
     </div>
