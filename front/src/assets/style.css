@@ -147,13 +147,16 @@ body {
   height: 2rem;
 }
 
-/* ----- SignUp Form ----- */
+/* ----- Login  ----- */
 
-.signup {
-  display: flex;
-  flex-direction: column;
-  margin: 2rem auto;
-  justify-content: center;
-  text-align: center;
-  width: 40rem;
+.login-link {
+  text-decoration: none;
+  color: #0072e5;
+}
+
+/* ----- SignUp  ----- */
+
+.signup-link {
+  text-decoration: none;
+  color: #0072e5;
 }

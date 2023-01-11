@@ -35,7 +35,9 @@ export default function NavBar() {
               component="div"
               sx={{ flexGrow: 1 }}
             ></Typography>
-            <Button color="inherit">CONNEXION</Button>
+            <Link className="navbar-link" to={"/login"}>
+              <Button color="inherit">CONNEXION</Button>
+            </Link>
             <Link className="navbar-link" to={"/signup"}>
               <Button color="inherit">INSCRIPTION</Button>
             </Link>

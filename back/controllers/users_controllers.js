@@ -13,10 +13,11 @@ exports.signup = (req, res, next) => {
       res.status(400).json({ error });
     });
 };
+
 exports.login = (req, res, next) => {
-  User.findOne({ id: req.params.email })
-    .then((room) => {
-      res.status(200).json(room);
+  User.findOne({ email: req.body.email })
+    .then((user) => {
+      res.status(200).json(user);
     })
     .catch((error) => {
       res.status(404).json({ error });

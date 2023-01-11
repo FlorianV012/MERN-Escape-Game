@@ -4,7 +4,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-import Link from "@mui/material/Link";
+import {Link } from 'react-router-dom' 
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
@@ -29,13 +29,11 @@ export default function SignUp() {
       body: JSON.stringify(reqBody),
     };
 
-    fetch(`${envConfig.URL}/users`, requestOptions).then((response) =>
+    fetch(`${envConfig.URL}/users/signup`, requestOptions).then((response) =>
       response.json()
     );
 
     event.target.reset();
-
-    console.log(reqBody);
   };
 
   return (
@@ -137,8 +135,8 @@ export default function SignUp() {
           </Button>
           <Grid container justifyContent="flex-end">
             <Grid item>
-              <Link to={'/login'} variant="body2">
-                Vous avez déja un compte? Connectez-vous
+              <Link to={'/login'} className='signup-link'>
+                Vous avez déja un compte ? Connectez-vous
               </Link>
             </Grid>
           </Grid>
